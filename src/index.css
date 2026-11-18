@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Oswald", system-ui, -apple-system, sans-serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    --paper-bg: #E8E2D0;
+    --paper-surface: #FBF8EF;
+    --ink-primary: #1A1917;
+    --ink-secondary: #4A463F;
+    --ink-muted: #787267;
+    --forest-accent: #3F6B2D;
+    --crimson-accent: #B91C1C;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--paper-bg);
+    color: var(--ink-primary);
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.touch-game-surface {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.sketch-box {
+  border: 2.5px solid #1A1917;
+  box-shadow: 4px 4px 0px #1A1917;
+}
+
+.sketch-box-sm {
+  border: 2px solid #1A1917;
+  box-shadow: 2.5px 2.5px 0px #1A1917;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
